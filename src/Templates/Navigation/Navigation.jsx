@@ -4,7 +4,7 @@ import MainBar from "../MainBar/MainBar";
 
 const Navigation = () => {
   return (
-    <Grid container direction="row" style={{ height: "100vh" }}>
+    <Grid container direction="row">
       <MainBar />
     </Grid>
   );

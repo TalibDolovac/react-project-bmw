@@ -2,8 +2,8 @@ import React from "react";
 import CustomDiv from "../../components/CustomDiv/CustomDiv";
 import { colors, fontSize } from "../../util/theme";
 import { Grid } from "@mui/material";
-import bmw from "../../assets/images/bmw.png";
-import Text from "../../components/Text/Text";
+import bmw from "../../assets/images/Logo/bmw.png";
+import { Link } from "react-router-dom";
 
 // Material ui icons
 import HomeIcon from "@mui/icons-material/Home";
@@ -18,6 +18,12 @@ const textStyle = {
   color: colors.white,
 };
 
+const LinkStyle = {
+  textDecoration: "none",
+  display: "flex",
+  gap: "3px",
+};
+
 const LeftMenu = () => (
   <CustomDiv
     style={{
@@ -27,7 +33,13 @@ const LeftMenu = () => (
       height: " 100%",
     }}
   >
-    <img src={bmw} alt="Logo" style={{ width: 65, height: "auto" }} />
+    <Link to="/">
+      <img
+        src={bmw}
+        alt="Logo"
+        style={{ width: 65, height: "auto", cursor: "pointer" }}
+      />
+    </Link>
   </CustomDiv>
 );
 
@@ -46,8 +58,10 @@ const RightMenu = () => (
         margin: "0px 10px",
       }}
     >
-      <HomeIcon style={iconStyle} />
-      <Text style={textStyle}>Home</Text>
+      <Link to="/" style={LinkStyle}>
+        <HomeIcon style={iconStyle} />
+        <span style={textStyle}>Home</span>
+      </Link>
     </CustomDiv>
     <CustomDiv
       style={{
@@ -55,8 +69,10 @@ const RightMenu = () => (
         margin: "0px 10px",
       }}
     >
-      <InfoIcon style={iconStyle} />
-      <Text style={textStyle}>About</Text>
+      <Link to="/about" style={LinkStyle}>
+        <InfoIcon style={iconStyle} />
+        <span style={textStyle}>About</span>
+      </Link>
     </CustomDiv>
     <CustomDiv
       style={{
@@ -64,8 +80,10 @@ const RightMenu = () => (
         margin: "0px 10px",
       }}
     >
-      <ContactSupportIcon style={iconStyle} />
-      <Text style={textStyle}>Contact</Text>
+      <Link to="/contact" style={LinkStyle}>
+        <ContactSupportIcon style={iconStyle} />
+        <span style={textStyle}>Contact</span>
+      </Link>
     </CustomDiv>
   </CustomDiv>
 );
