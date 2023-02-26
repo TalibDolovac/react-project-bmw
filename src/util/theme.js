@@ -1,16 +1,19 @@
 export const colors = {
   accentColor: "#A2BCBF",
   secondColor: "#0066B2",
+  secondColorRGB: "0, 102, 178",
+  white: "#fff",
+  whiteRGB: "255, 255, 255",
   azurWhite: "#D7E2E9",
   gainsBoro: "#D6E3DC",
   gray: "#6F7070",
-  white: "#fff",
 };
 
 export const fontWeight = {
   light: "100",
   medium: "400",
   mediumBold: "600",
+  boldPlus: "700",
   bold: "800",
 };
 
