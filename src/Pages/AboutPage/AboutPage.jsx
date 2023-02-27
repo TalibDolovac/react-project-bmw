@@ -13,6 +13,7 @@ const AboutPage = () => {
           color: colors.secondColor,
           letterSpacing: "8px",
           fontWeight: fontWeight.boldPlus,
+          margin: "15px 0 15px 0",
         }}
       >
         BMW - Talib's site
