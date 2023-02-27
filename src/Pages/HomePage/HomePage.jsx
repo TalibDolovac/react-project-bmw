@@ -31,15 +31,13 @@ const HomePage = () => {
   const [imageSrcs, setImageSrcs] = useState([]);
 
   useEffect(() => {
-    // Fetch the random BMW images from the Flask server
     fetch("http://localhost:5000/random_bmw_images")
       .then((response) => response.json())
       .then((data) => {
-        // Convert the array of image URLs to an array of image sources
         const sources = data.urls.map((url) => ({
           src: `http://localhost:5000${url}`,
           alt: "bmw-image",
-          name: url.split("/")[2].split(".")[0], // Extract the name from the URL
+          name: url.split("/")[2].split(".")[0],
         }));
         setImageSrcs(sources);
       });
