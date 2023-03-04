@@ -42,15 +42,17 @@ const divStyle = {
 const buttonStyles = {
   imageButton: {
     position: "absolute",
-    top: "25px",
+    top: "35px",
     left: "45px",
-    padding: "10px 30px",
+    padding: "10px 25px",
     color: `rgba(${colors.secondColorRGB}, 1)`,
     background: `rgba(${colors.whiteRGB}, 0.3)`,
     border: "none",
     borderRadius: "10px",
     fontSize: fontSize.xLarge,
     cursor: "pointer",
+    fontSize: "32px",
+    fontWeight: fontWeight.boldPlus,
   },
   popupModalButton: {
     position: "absolute",
@@ -66,7 +68,7 @@ const buttonStyles = {
 const imageStyle = {
   width: 300,
   height: "auto",
-  margin: "15px 0 15px 0",
+  margin: "25px 0 15px 0",
   borderRadius: "6px",
 };
 
