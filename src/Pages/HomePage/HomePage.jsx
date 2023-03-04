@@ -25,6 +25,8 @@ const buttonStyle = {
 const imageStyle = {
   width: 300,
   height: "auto",
+  marginBottom: "8px",
+  borderRadius: "5px",
 };
 
 const HomePage = () => {
@@ -58,25 +60,17 @@ const HomePage = () => {
       >
         BMW - Talib's site
       </Text>
-      <CustomDiv
-        style={{
-          width: "100%",
-          height: "auto",
-          display: "flex",
-          padding: "50px 2.5%",
-        }}
-      >
-        <Grid container direction="row">
-          {imageSrcs.map((source, index) => (
-            <Grid item md={3} lg={3} key={index}>
-              <div style={containerStyle}>
-                <img src={source.src} alt={source.alt} style={imageStyle} />
-                <CustomButton style={buttonStyle}>{source.name}</CustomButton>
-              </div>
-            </Grid>
-          ))}
-        </Grid>
-      </CustomDiv>
+
+      <Grid container direction="row">
+        {imageSrcs.map((source, index) => (
+          <Grid item md={3} lg={3} key={index}>
+            <CustomDiv style={containerStyle}>
+              <img src={source.src} alt={source.alt} style={imageStyle} />
+              <CustomButton style={buttonStyle}>{source.name}</CustomButton>
+            </CustomDiv>
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 };
