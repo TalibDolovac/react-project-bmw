@@ -72,6 +72,7 @@ const imageStyle = {
   borderRadius: "6px",
 };
 
+// Promena - dodao opis za sve bmw automobile u python file
 // ----------------- Styles -----------------
 
 const HomePage = () => {
